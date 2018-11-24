@@ -678,6 +678,13 @@ exports = module.exports = {
                     responseHeaders: null
                 },
 
+                '.well-known/manifest.json': {
+                    responseHeaders: {
+                        'cache-control': 'max-age=604800, no-transform',
+                        'content-type': 'application/manifest+json; charset=utf-8'
+                    }
+                },
+
                 '.well-known/test/': {
                     responseHeaders: null,
                     statusCode: 403
